@@ -3,25 +3,125 @@
   --font-secondary: "Arial", sans-serif;
   --color-basic-green: #68b738;
   --color-basic-green-2: #5eaa2f;
+  --color-basic-black: #000;
+  --color-basic-white: #fff;
+  --color-active-white: #fff5;
   --color-basic-grey: #f2f2f2;
   --color-special-grey: #ebebeb;
   --color-special-grey-2: #cdcdcd;
   --color-special-grey-3: #666;
   --color-special-dark-grey: #444;
+  --color-active-dark-grey: #4445;
   --color-special-dark-grey-2: #222;
   --color-status-error: #ff8282;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+body {
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  line-height: 24px;
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 38px;
+  color: var(--color-special-dark-grey);
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: var(--color-basic-grey);
+}
+
+.btn:hover {
+  background-color: var(--color-special-grey);
+}
+
+.btn:active {
+  color: var(--color-active-dark-grey);
+}
+
+.btn-primary {
+  color: var(--color-basic-white);
+  background-color: var(--color-basic-green);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-basic-green-2);
+}
+
+.btn-primary:active {
+  color: var(--color-active-white);
+}
+
+.heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
   font-family: var(--font-primary);
 }
 
-body {
-  font-family: var(--font-secondary);
-  font-size: 16px;
-  line-height: 24px;
+.heading-1 {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+.heading-2 {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.heading-3 {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.main-menu {
+}
+
+.main-menu--theme--white .main-menu__item-link {
+  color: var(--color-basic-white);
+}
+
+.main-menu--theme--black .main-menu__item-link {
+  color: var(--color-basic-black);
+}
+
+.main-menu--theme--white .main-menu__item-link:hover,
+.main-menu--theme--black .main-menu__item-link:hover {
+  opacity: 0.6;
+}
+
+.main-menu--theme--white .main-menu__item-link:active,
+.main-menu--theme--black .main-menu__item-link:active {
+  opacity: 0.3;
+}
+
+.main-menu--theme--white .main-menu__list-item--active {
+  border-bottom: 2px solid var(--color-basic-white);
+}
+
+.main-menu--theme--black .main-menu__list-item--active {
+  border-bottom: 2px solid var(--color-basic-green);
+}
+
+.main-menu__list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 33px;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-menu__list-item {
+  padding-bottom: 8px;
+  font-size: 20px;
+}
+
+.main-menu__item-link {
+  text-transform: uppercase;
+  text-decoration: none;
 }
