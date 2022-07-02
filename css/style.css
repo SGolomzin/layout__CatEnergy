@@ -132,6 +132,18 @@ body {
   text-decoration: none;
 }
 
+.features__group {
+  list-style: none;
+  counter-reset: feature;
+}
+
+.features__item::after {
+  color: var(--color-basic-green-2);
+  font-family: var(--font-primary);
+  content: counter(feature);
+  counter-increment: feature;
+}
+
 .main-footer {
   background-color: var(--color-basic-grey);
 }
