@@ -17,9 +17,14 @@
 }
 
 body {
+  color: var(--color-special-dark-grey);
   font-size: 16px;
   font-family: var(--font-secondary);
   line-height: 24px;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .btn {
@@ -56,6 +61,7 @@ body {
 .heading {
   margin: 0;
   padding: 0;
+  color: var(--color-basic-black);
   font-weight: 400;
   font-family: var(--font-primary);
 }
@@ -124,4 +130,28 @@ body {
 .main-menu__item-link {
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.main-footer {
+  background-color: var(--color-basic-grey);
+}
+
+.socials-list {
+  list-style: none;
+}
+
+.socials-list__icon {
+  fill: var(--color-special-grey-3);
+  stroke: var(--color-special-grey-3);
+}
+
+.socials-list__icon:hover {
+  fill: var(--color-basic-green);
+  stroke: var(--color-basic-green);
+}
+
+.socials-list__icon:active {
+  opacity: 0.6;
+  fill: var(--color-basic-green);
+  stroke: var(--color-basic-green);
 }
