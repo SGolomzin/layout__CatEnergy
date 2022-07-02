@@ -83,6 +83,13 @@ body {
   text-transform: uppercase;
 }
 
+.main-header__logo {
+  width: 202px;
+  height: 59px;
+  background-image: url("../public/logo-desktop.svg");
+  background-repeat: no-repeat;
+}
+
 .main-menu {
 }
 
