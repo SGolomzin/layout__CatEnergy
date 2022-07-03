@@ -140,6 +140,29 @@ body {
   text-decoration: none;
 }
 
+.preview__link {
+  color: currentColor;
+  text-transform: uppercase;
+}
+
+.preview__link:active {
+  opacity: 0.3;
+}
+
+.link__svg-arrow-line,
+.link__svg-arrow-head {
+  transition: all 0.5s ease;
+  fill: currentColor;
+}
+
+.link:hover .link__svg-arrow-line {
+  width: 80%;
+}
+
+.link:hover .link__svg-arrow-head {
+  transform: translateX(25%);
+}
+
 .features__group {
   list-style: none;
   counter-reset: feature;
