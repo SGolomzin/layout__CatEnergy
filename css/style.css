@@ -16,7 +16,14 @@
   --color-status-error: #ff8282;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
   margin: 0;
   color: var(--color-special-dark-grey);
   font-size: 16px;
