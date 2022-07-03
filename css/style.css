@@ -171,13 +171,44 @@ body {
 }
 
 .features__group {
+  --feature-height: 20vw;
+  --feature-icon-size: 80px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 80px;
+  margin: 0;
+  padding: 0;
   list-style: none;
   counter-reset: feature;
 }
 
-.features__item::after {
+.feature {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px 32px;
+  height: var(--feature-height);
+}
+
+.feature__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--feature-icon-size);
+  height: var(--feature-icon-size);
+  background-color: var(--color-basic-green-2);
+}
+
+.feature::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
   color: var(--color-basic-green-2);
+  font-size: var(--feature-height);
   font-family: var(--font-primary);
+  line-height: var(--feature-height);
   content: counter(feature);
   counter-increment: feature;
 }
