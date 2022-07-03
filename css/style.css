@@ -17,6 +17,7 @@
 }
 
 body {
+  margin: 0;
   color: var(--color-special-dark-grey);
   font-size: 16px;
   font-family: var(--font-secondary);
