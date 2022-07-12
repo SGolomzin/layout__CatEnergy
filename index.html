@@ -233,19 +233,26 @@
                 alt="cat-after"
               />
             </div>
-            <label class="before-after__diff-label heading heading-3">
-              было<input
-                class="before-after__diff-input"
-                type="range"
-                min="0"
-                auto
-                max="1"
-                step="0.01"
-                value="0.5"
-                oninput="transformDiff(this.value)"
-                onchange="transformDiff(this.value)"
-              />стало
-            </label>
+            <div class="before-after__diff-input-controls">
+              <button class="before-after__diff-label heading heading-3">
+                было
+              </button>
+              <div class="before-after__diff-input-wrapper">
+                <input
+                  class="before-after__diff-input"
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="0.5"
+                  oninput="transformDiff(this.value)"
+                  onchange="transformDiff(this.value)"
+                />
+              </div>
+              <button class="before-after__diff-label heading heading-3">
+                стало
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -33,6 +33,32 @@ body {
   height: 100%;
 }
 
+/* clear range for custom styles */
+input[type="range"] {
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  color: transparent;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+/* ----- */
+
 :root {
   --font-primary: "Oswald", sans-serif;
   --font-secondary: "Arial", sans-serif;
@@ -213,54 +239,60 @@ main {
 
 /* =========== hero section =========== */
 .hero {
+  position: relative;
   margin-bottom: 82px;
   overflow: hidden;
 }
 
 .hero__container {
-  position: relative;
   display: flex;
   flex-flow: column nowrap;
   gap: 40px;
   align-items: flex-start;
   justify-content: center;
-  padding: 165px 0 185px;
+  padding: 165px 0 125px 80px;
 }
 
 .hero__container::before {
   position: absolute;
   top: 0;
+  right: 0;
   right: 50%;
   z-index: -2;
-  width: 100vw;
+  width: 50%;
   height: 100%;
   background-color: var(--color-basic-green-2);
   background-image: url("../public/index-background-desktop.png");
   background-repeat: no-repeat;
+  background-position: right top;
   transform: translate(100%, 0px);
   content: "";
 }
 
 .hero__heading,
 .hero__subheading {
-  width: 35%;
+  width: 420px;
+}
+
+.hero__heading {
+  margin-top: 60px;
 }
 
 .hero__subheading {
   margin-bottom: 12px;
 }
 
-/* .hero__bg-image {
+.hero__bg-image {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 500px;
   background-image: url("../public/index-can-desktop.png");
   background-repeat: no-repeat;
-  background-position: 65%;
-} */
+  background-position: 60%;
+}
 
 /* =========== programs =========== */
 .programs {
@@ -492,16 +524,6 @@ main {
   align-self: flex-end;
 }
 
-.before-after__diff-label {
-  display: flex;
-  flex: 0 0 40px;
-  gap: 20px;
-  align-items: center;
-  line-height: auto;
-  text-decoration: underline dotted rgba(0, 0, 0, 24%);
-  text-underline-offset: 5px;
-}
-
 .before-after__diff-images-wrapper {
   position: relative;
   display: flex;
@@ -525,10 +547,84 @@ main {
   clip-path: polygon(50% 0%, 50% 100%, 100% 100%, 100% 0%);
 }
 
-.before-after__diff-input {
+.before-after__diff-input-controls {
+  display: flex;
+  flex: 0 0 40px;
+  gap: 20px;
+  align-items: center;
+}
+
+.before-after__diff-label {
+  text-decoration: underline dotted rgba(0, 0, 0, 24%);
+  background-color: transparent;
+  text-underline-offset: 5px;
+}
+
+.before-after__diff-label:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 40%);
+}
+
+.before-after__diff-label:active {
+  text-decoration: none;
+}
+
+.before-after__diff-input-wrapper {
   flex: 1 0 auto;
 }
 
+.before-after__diff-input::-webkit-slider-thumb {
+  width: 34px;
+  height: 34px;
+  background-color: var(--color-basic-green);
+  border: 1px solid var(--color-special-grey-2);
+  border-radius: 1e7px;
+  box-shadow: inset 0 0 0 11px #fff;
+  transform: translateY(-14px);
+  cursor: pointer;
+}
+
+.before-after__diff-input::-moz-range-thumb {
+  width: 34px;
+  height: 34px;
+  background-color: var(--color-basic-green);
+  border: 1px solid var(--color-special-grey-2);
+  border-radius: 1e7px;
+  box-shadow: inset 0 0 0 11px #fff;
+  cursor: pointer;
+}
+
+.before-after__diff-input:hover::-webkit-slider-thumb {
+  box-shadow: inset 0 0 0 11px #fff, 0px 2px 4px rgba(0, 0, 0, 0.19);
+}
+
+.before-after__diff-input:active::-webkit-slider-thumb {
+  border-color: var(--color-basic-green);
+  box-shadow: inset 0 0 0 11px #fff, 0px 2px 4px rgba(0, 0, 0, 0.19);
+}
+
+.before-after__diff-input:focus-visible::-webkit-slider-thumb {
+  outline: var(--color-basic-black) auto 1px;
+}
+
+.before-after__diff-input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  background: var(--color-special-grey-2);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.before-after__diff-input:focus::-webkit-slider-runnable-track {
+  border: 1px solid var(--color-special-dark-grey);
+}
+
+.before-after__diff-input::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  background: var(--color-special-grey-2);
+  border-radius: 6px;
+  cursor: pointer;
+}
 /* =========== contacts =========== */
 .contacts {
   position: relative;
