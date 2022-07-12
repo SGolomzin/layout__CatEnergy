@@ -122,7 +122,6 @@ main {
 
 .heading-3 {
   font-size: 20px;
-
   text-transform: uppercase;
 }
 
@@ -261,6 +260,10 @@ main {
   background-position: 65%;
 } */
 
+.programs {
+  margin-bottom: 70px;
+}
+
 .programs__container {
   display: flex;
   flex-flow: row wrap;
@@ -370,6 +373,155 @@ main {
   line-height: 1;
   content: counter(feature);
   counter-increment: feature;
+}
+
+.before-after {
+  position: relative;
+  height: 656px;
+  padding-bottom: 75px;
+}
+
+.before-after::before {
+  position: absolute;
+  bottom: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 462px;
+  background-color: var(--color-basic-grey);
+  content: "";
+}
+
+.before-after__container {
+  display: flex;
+  flex-flow: row wrap;
+  height: 100%;
+}
+
+.before-after__info,
+.before-after__diff {
+  flex: 0 0 50%;
+}
+
+.before-after__info {
+  display: grid;
+  grid-template-areas:
+    "ba-heading"
+    "ba-description"
+    "ba-fgroups"
+    "ba-cost";
+  grid-template-rows: 206px 1fr auto 75px;
+  align-items: center;
+  padding-right: 164px;
+}
+
+.before-after__info-heading {
+  grid-area: ba-heading;
+  /* margin-top: 70px; */
+}
+
+.before-after__info-description {
+  grid-area: ba-description;
+  /* margin-top: 146px; */
+}
+
+.before-after__diff {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.before-after__diff-images-wrapper {
+  flex: 1 0 50%;
+}
+
+.before-after__fieldset-group {
+  display: flex;
+  flex-flow: row wrap;
+
+  grid-area: ba-fgroups;
+
+  gap: 20px 42px;
+  align-items: flex-start;
+  /* margin-top: 70px; */
+}
+
+.before-after__fieldset {
+  width: 162px;
+}
+
+.fieldset {
+  --fieldset-border-color: var(--color-special-grey-2);
+  --fieldset-bg-color: var(--color-basic-grey);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fieldset-bg-color);
+  border: 1px solid var(--fieldset-border-color);
+  border-radius: 3px;
+}
+
+.fieldset__content {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  color: var(--color-basic-black);
+  font-size: 30px;
+  font-family: var(--font-primary);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.fieldset__legend {
+  position: absolute;
+  bottom: 0;
+  max-width: 90%;
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  background-color: var(--fieldset-bg-color);
+  transform: translateY(50%);
+}
+
+.before-after__cost-field {
+  grid-area: ba-cost;
+  align-self: flex-end;
+}
+
+.before-after__diff-label {
+  display: flex;
+  flex: 0 0 40px;
+  gap: 20px;
+  align-items: center;
+  line-height: auto;
+  text-decoration: underline dotted rgba(0, 0, 0, 24%);
+  text-underline-offset: 5px;
+}
+
+.before-after__diff-images-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.before-after__img-before,
+.before-after__img-after {
+  position: absolute;
+  max-width: 100%;
+}
+
+.before-after__img-before {
+  object-fit: cover;
+  clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0%);
+}
+
+.before-after__img-after {
+  object-fit: cover;
+  clip-path: polygon(50% 0%, 50% 100%, 100% 100%, 100% 0%);
+}
+
+.before-after__diff-input {
+  flex: 1 0 auto;
 }
 
 .main-footer {

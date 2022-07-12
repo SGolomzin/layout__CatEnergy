@@ -75,9 +75,9 @@
           <h1 class="heading heading-1 hero__heading">
             Функциональное питание для котов
           </h1>
-          <h3 class="heading heading-3 hero__subheading">
+          <p class="heading heading-3 hero__subheading">
             Занялся собой? Займись котом!
-          </h3>
+          </p>
           <a href="#" class="btn btn-primary">Подобрать программу</a>
           <div class="hero__bg-image"></div>
         </div>
@@ -193,16 +193,60 @@
         </div>
       </section>
 
-      <section class="examples">
-        <div class="examples__container">
-          <h2 class="heading heading-1">Живой пример</h2>
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-          Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
-          этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          <div>5 КГ снижение веса</div>
-          <div>60 дней затрачено времени</div>
-          Затраты на питание: 15 000 РУБ.
-          <div>Было Стало</div>
+      <section class="before-after">
+        <div class="before-after__container">
+          <div class="before-after__info">
+            <h2 class="before-after__info-heading heading heading-1">
+              Живой пример
+            </h2>
+            <p class="before-after__info-description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов
+              в день.
+            </p>
+            <div class="before-after__fieldset-group">
+              <div class="before-after__fieldset fieldset">
+                <span class="fieldset__content">5 КГ</span>
+                <span class="fieldset__legend">снижение веса</span>
+              </div>
+              <div class="before-after__fieldset fieldset">
+                <span class="fieldset__content">60 дней</span>
+                <span class="fieldset__legend">затрачено времени</span>
+              </div>
+            </div>
+            <p class="before-after__cost-field heading heading-3">
+              Затраты на питание:
+              <span class="before-after__cost-field-price">15 000 РУБ.</span>
+            </p>
+          </div>
+          <div class="before-after__diff">
+            <div class="before-after__diff-images-wrapper">
+              <img
+                class="before-after__img-before"
+                src="./public/before-desktop@2x.png"
+                alt="cat-before"
+              />
+              <img
+                class="before-after__img-after"
+                src="./public/after-desktop@2x.png"
+                alt="cat-after"
+              />
+            </div>
+            <label class="before-after__diff-label heading heading-3">
+              было<input
+                class="before-after__diff-input"
+                type="range"
+                min="0"
+                auto
+                max="1"
+                step="0.01"
+                value="0.5"
+                oninput="transformDiff(this.value)"
+                onchange="transformDiff(this.value)"
+              />стало
+            </label>
+          </div>
         </div>
       </section>
 
@@ -211,7 +255,7 @@
           <h2 class="heading heading-3">
             приглашаем к сотрудничеству дилеров!
           </h2>
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          <address>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
       </section>
     </main>
@@ -270,4 +314,5 @@
       </div>
     </footer>
   </body>
+  <script src="script.js"></script>
 </html>
