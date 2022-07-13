@@ -53,7 +53,25 @@
 
     <header class="main-header">
       <div class="main-header__container">
-        <div class="logo main-header__logo"></div>
+        <a class="logo main-header__logo">
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="./public/logo-mobile.svg"
+            />
+            <source
+              media="(max-width: 1300px)"
+              srcset="./public/logo-tablet.svg"
+            />
+            <img
+              class="page-header__logo-image"
+              src="./public/logo-desktop.svg"
+              alt="Cat Energy - логотип"
+              width="202"
+              height="59"
+            />
+          </picture>
+        </a>
         <nav class="main-menu">
           <ul class="main-menu__list">
             <li class="main-menu__list-item main-menu__list-item--active">
@@ -79,7 +97,31 @@
             Занялся собой? Займись котом!
           </p>
           <a href="#" class="btn btn-primary">Подобрать программу</a>
-          <div class="hero__bg-image"></div>
+          <div class="hero__bg-image">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="
+                  /public/index-can-mobile@1x.png 1x,
+                  /public/index-can-mobile@2x.png 2x
+                "
+              />
+              <source
+                media="(max-width: 1300px)"
+                srcset="
+                  /public/index-can-tablet@1x.jpg 1x,
+                  /public/index-can-tablet@2x.jpg 2x
+                "
+              />
+              <img
+                srcset="
+                  /public/index-can-desktop@1x.png 1x,
+                  /public/index-can-desktop@2x.png 2x
+                "
+                alt="Cat Energy - промо товара"
+              />
+            </picture>
+          </div>
         </div>
       </section>
 
