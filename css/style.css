@@ -70,6 +70,7 @@ input[type="range"]:focus {
 body {
   display: flex;
   flex-flow: column nowrap;
+  min-width: 320px;
   margin: 0;
   color: var(--color-special-dark-grey);
   font-size: 16px;
@@ -82,19 +83,20 @@ main {
 }
 
 [class*="__container"] {
-  max-width: 1200px;
+  max-width: 1230px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 @media (max-width: 768px) {
   [class*="__container"] {
-    max-width: 208px;
+    min-width: 238px;
   }
 }
 
 @media (max-width: 1300px) {
   [class*="__container"] {
-    max-width: 780px;
+    max-width: 810px;
   }
 }
 
@@ -365,30 +367,36 @@ main {
 /* =========== features =========== */
 .features__group {
   --feature-height: 280px;
+  --feature-height-sm: 60px;
   --feature-icon-size: 80px;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(4, 1fr);
+  --feature-icon-size-sm: 60px;
+  display: flex;
+  flex-flow: row wrap;
   gap: 40px 80px;
   counter-reset: feature;
+}
+
+@media (max-width: 768px) {
+  .features__group {
+    gap: 20px 0;
+    margin-top: 38px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .features__group {
+    gap: 40px 152px;
+  }
 }
 
 .feature {
   position: relative;
   display: flex;
+  flex: 0 0 230px;
   flex-flow: column wrap;
   gap: 32px;
   justify-content: center;
   height: var(--feature-height);
-}
-
-.feature__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--feature-icon-size);
-  height: var(--feature-icon-size);
-  background-color: var(--color-basic-green-2);
 }
 
 .feature::after {
@@ -404,8 +412,46 @@ main {
   counter-increment: feature;
 }
 
+.feature__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--feature-icon-size);
+  height: var(--feature-icon-size);
+  background-color: var(--color-basic-green-2);
+}
+
 .feature__description {
   text-shadow: 1px 1px 2px var(--color-basic-white);
+}
+
+@media (max-width: 768px) {
+  .feature {
+    flex: 0 0 100%;
+    flex-flow: row nowrap;
+    gap: 20px;
+    height: var(--feature-height-sm);
+  }
+
+  .feature::after {
+    display: none;
+  }
+
+  .feature__icon {
+    flex: 0 0 80px;
+    min-width: var(--feature-height-sm);
+    min-height: var(--feature-height-sm);
+  }
+
+  .feature__description {
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 1300px) {
+  .feature::after {
+    color: var(--color-basic-grey);
+  }
 }
 
 /* =========== before-after =========== */
