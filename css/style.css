@@ -384,6 +384,7 @@ main {
   .hero__bg-image {
     position: inherit;
     z-index: 1;
+    width: 100%;
     height: auto;
     transform: none;
   }
@@ -418,8 +419,8 @@ main {
 .preview__icon-wrapper {
   position: relative;
   grid-area: preview-icon;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   background-color: var(--color-basic-green);
   border-radius: 1e7px;
 }
@@ -463,6 +464,57 @@ main {
 
 .link:hover .link__svg-arrow-head {
   transform: translateX(25%);
+}
+
+@media (max-width: 1300px) {
+  .preview {
+    flex: 1 0 45%;
+    grid-template-areas:
+      "preview-heading preview-icon"
+      "preview-desc preview-icon"
+      "preview-link preview-icon";
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-columns: 1fr 250px;
+    gap: 24px 60px;
+    background-color: var(--color-basic-grey);
+  }
+
+  .preview__icon-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .preview {
+    grid-template-areas:
+      "preview-icon preview-heading"
+      "preview-desc preview-desc"
+      "preview-link preview-link";
+    grid-template-rows: 50px auto auto;
+    grid-template-columns: 50px 1fr;
+    gap: 20px;
+  }
+
+  .preview__icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  .preview__description {
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .preview__description::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-special-grey-2);
+    content: "";
+  }
 }
 
 /* =========== features =========== */
