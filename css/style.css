@@ -217,6 +217,7 @@ main {
 }
 
 .main-menu {
+  display: block;
   font-family: var(--font-primary);
 }
 
@@ -258,9 +259,41 @@ main {
   text-decoration: none;
 }
 
+.main-header__toggle-menu-btn {
+  position: relative;
+  display: none;
+  align-self: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.main-header__toggle-menu-btn--open::before,
+.main-header__toggle-menu-btn--close::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  content: "";
+}
+
+.main-header__toggle-menu-btn--open::before {
+  background-image: url("/public/icon_menu_open.svg");
+}
+
+.main-header__toggle-menu-btn--close::before {
+  background-image: url("/public/icon_menu_close.svg");
+}
+
 @media (max-width: 1300px) {
   .main-header {
     height: 100px;
+  }
+
+  .main-menu {
+    display: block;
   }
 
   .main-menu__item-link {
@@ -282,12 +315,42 @@ main {
     background-color: var(--color-basic-white);
   }
 
-  /* 
-  пока не сделано бургер-меню
-  не отображаю пункты меню на мобильном разрешении
-  */
   .main-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
     display: none;
+    width: 100%;
+    background-color: var(--color-basic-white);
+  }
+
+  .main-menu__list {
+    flex-flow: column nowrap;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-menu__list-item {
+    width: 100%;
+    padding: 20px 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-basic-grey);
+  }
+
+  .main-menu__list-item:first-of-type {
+    border-top: 2px solid var(--color-basic-grey);
+  }
+
+  .main-menu__list-item--active,
+  .main-menu__list-item--active:hover,
+  .main-menu__list-item--active:focus,
+  .main-menu__list-item--active:active {
+    border-bottom: 2px solid var(--color-basic-green);
+  }
+
+  .main-header__toggle-menu-btn {
+    display: block;
   }
 }
 
