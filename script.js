@@ -31,10 +31,10 @@ btnMobileMainHeaderMenu.addEventListener("click", (e) => {
 	if (isOpen) {
 		btnValue.innerText = "Открыть меню";
 		btnValue.dataset.open = "0";
-		mainHeaderMenu.style.display = "none";
 	} else {
 		btnValue.innerText = "Закртыть меню";
 		btnValue.dataset.open = "1";
-		mainHeaderMenu.style.display = "block";
 	}
+	mainHeaderMenu.classList.toggle("main-menu--opend");
+	mainHeaderMenu.classList.toggle("main-menu--closed");
 })

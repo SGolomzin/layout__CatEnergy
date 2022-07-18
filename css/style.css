@@ -83,20 +83,21 @@ main {
 }
 
 [class*="__container"] {
-  max-width: 1230px;
+  width: 1230px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 @media (max-width: 1300px) {
   [class*="__container"] {
-    max-width: 738px;
+    width: 738px;
   }
 }
 
 @media (max-width: 767.98px) {
   [class*="__container"] {
-    min-width: 238px;
+    /* width: 238px; */
+    width: 320px;
   }
 }
 
@@ -202,7 +203,6 @@ main {
 
 .main-header__container {
   display: flex;
-  flex: 1 0 auto;
   flex-flow: row nowrap;
   align-items: flex-end;
   height: 59px;
@@ -239,6 +239,7 @@ main {
 .main-menu__list-item--active:focus,
 .main-menu__list-item--active:active {
   border-bottom: 2px solid var(--color-basic-white);
+  cursor: default;
   opacity: 1;
 }
 
@@ -266,6 +267,7 @@ main {
   width: 24px;
   height: 24px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .main-header__toggle-menu-btn--open::before,
@@ -319,9 +321,16 @@ main {
     position: absolute;
     top: 100%;
     left: 0;
-    display: none;
     width: 100%;
     background-color: var(--color-basic-white);
+  }
+
+  .main-menu--closed {
+    display: none;
+  }
+
+  .main-menu--opend {
+    display: block;
   }
 
   .main-menu__list {
@@ -1142,7 +1151,6 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: 100%;
 }
 
 .socials-list {
@@ -1206,7 +1214,6 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    width: 100%;
     height: 100%;
     padding-top: 22px;
     padding-bottom: 22px;
