@@ -541,8 +541,11 @@ main {
   margin: 14px 0 0 0;
 }
 
-.preview__link {
+.preview__link-wrapper {
   grid-area: preview-link;
+}
+
+.preview__link {
   color: currentColor;
   text-transform: uppercase;
 }
