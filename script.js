@@ -29,9 +29,11 @@ btnMobileMainHeaderMenu.addEventListener("click", (e) => {
 	var isOpen = +btnValue.dataset.open;
 
 	if (isOpen) {
+		e.target.ariaLabel = "Открыть меню";
 		btnValue.innerText = "Открыть меню";
 		btnValue.dataset.open = "0";
 	} else {
+		e.target.ariaLabel = "Закртыть меню";
 		btnValue.innerText = "Закртыть меню";
 		btnValue.dataset.open = "1";
 	}
