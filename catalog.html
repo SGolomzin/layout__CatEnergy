@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Cat Energy - функциональное питание для котов</title>
+    <title>Cat Energy - Каталог продукции</title>
     <meta
       name="description"
       content="Cat Energy - функциональное питание для котов"
@@ -61,7 +61,7 @@
 
     <header class="main-header">
       <div class="main-header__container">
-        <a class="logo main-header__logo">
+        <a href="/index.html" class="logo main-header__logo">
           <picture>
             <source
               media="(max-width: 767.98px)"
@@ -86,15 +86,13 @@
         >
           <span style="display: none" data-open="0">Открыть меню</span>
         </button>
-        <nav class="main-menu main-menu--closed main-menu--index-page">
+        <nav class="main-menu main-menu--closed">
           <ul class="main-menu__list">
-            <li class="main-menu__list-item main-menu__list-item--active">
-              <a class="main-menu__item-link"> Главная </a>
-            </li>
             <li class="main-menu__list-item">
-              <a href="/catalog.html" class="main-menu__item-link">
-                Каталог продукции
-              </a>
+              <a href="index.html" class="main-menu__item-link"> Главная </a>
+            </li>
+            <li class="main-menu__list-item main-menu__list-item--active">
+              <a class="main-menu__item-link"> Каталог продукции </a>
             </li>
             <li class="main-menu__list-item">
               <a href="#" class="main-menu__item-link"> Подбор программы </a>
@@ -104,253 +102,12 @@
       </div>
     </header>
     <main class="main">
-      <section class="hero main__top-element">
-        <div class="hero__container">
-          <div class="hero__slogans">
-            <h1 class="heading heading-1 hero__heading">
-              Функциональное питание для котов
-            </h1>
-            <p class="heading heading-3 hero__subheading">
-              Занялся собой? Займись котом!
-            </p>
-            <picture>
-              <source
-                media="(max-width: 767.98px)"
-                srcset="
-                  /public/index-can-mobile@1x.png 1x,
-                  /public/index-can-mobile@2x.png 2x
-                "
-              />
-              <source
-                media="(max-width: 1300px)"
-                srcset="
-                  /public/index-can-tablet@1x.jpg 1x,
-                  /public/index-can-tablet@2x.jpg 2x
-                "
-              />
-              <img
-                class="hero__bg-image"
-                src="/public/index-can-desktop@1x.png"
-                srcset="/public/index-can-desktop@2x.png 2x"
-                alt="Cat Energy - промо товара"
-              />
-            </picture>
-            <a href="#" class="btn btn-primary">Подобрать программу</a>
-          </div>
-        </div>
+      <section class="products main__top-element">
+        <div class="products__container">Catalog</div>
       </section>
 
-      <section class="programs">
-        <div class="programs__container">
-          <article class="preview">
-            <div class="preview__icon-wrapper">
-              <img
-                class="preview__icon"
-                src="./public/cat-slim.svg"
-                alt="Slim cat shape image"
-              />
-            </div>
-            <h1 class="heading heading-2 preview__heading">Похудение</h1>
-            <p class="preview__description">
-              Ваш кот весит больше собаки и почти утратил способность лазить по
-              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
-              сбросить лишний вес.
-            </p>
-            <div class="preview__link-wrapper">
-              <a href="#" class="link preview__link">
-                Каталог Slim
-                <svg
-                  width="32"
-                  height="12"
-                  viewBox="0 0 32 12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    class="link__svg-arrow-line"
-                    y="5"
-                    width="18"
-                    height="2"
-                  />
-                  <path
-                    class="link__svg-arrow-head"
-                    d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </article>
-          <article class="preview">
-            <div class="preview__icon-wrapper">
-              <img
-                class="preview__icon"
-                src="./public/cat-pro.svg"
-                alt="Strong cat shape image"
-              />
-            </div>
-            <h1 class="heading heading-2 preview__heading">Набор массы</h1>
-            <p class="preview__description">
-              Заработать авторитет среди дворовых котов и даже собак? Серия Cat
-              Energy Pro поможет вашему коту нарастить необходимые мышцы!
-            </p>
-            <div class="preview__link-wrapper">
-              <a href="#" class="link preview__link">
-                Каталог PRO
-                <svg
-                  width="32"
-                  height="12"
-                  viewBox="0 0 32 12"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    class="link__svg-arrow-line"
-                    y="5"
-                    width="18"
-                    height="2"
-                  />
-                  <path
-                    class="link__svg-arrow-head"
-                    d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="features">
-        <div class="features__container">
-          <h2 class="heading heading-1">Как это работает</h2>
-          <ul class="features__group">
-            <li class="feature">
-              <div class="feature__icon">
-                <img
-                  src="./public/icon_leaf.svg"
-                  alt="Leaf icon"
-                  width="30"
-                  height="32"
-                />
-              </div>
-              <p class="feature__description">
-                Функциональное питание содержит только полезные питательные
-                вещества.
-              </p>
-            </li>
-            <li class="feature">
-              <div class="feature__icon">
-                <img
-                  src="./public/icon_tub.svg"
-                  alt="Tub icon"
-                  width="29"
-                  height="31"
-                />
-              </div>
-              <p class="feature__description">
-                Выпускается в виде порошка, который нужно лишь залить кипятком и
-                готово.
-              </p>
-            </li>
-            <li class="feature">
-              <div class="feature__icon">
-                <img
-                  src="./public/icon_eat.svg"
-                  alt="Eat icon"
-                  width="25"
-                  height="30"
-                />
-              </div>
-              <p class="feature__description">
-                Замените один-два приема обычной еды на наше функциональное
-                питание.
-              </p>
-            </li>
-            <li class="feature">
-              <div class="feature__icon">
-                <img
-                  src="./public/icon_alarm.svg"
-                  alt="Alarm icon"
-                  width="32"
-                  height="33"
-                />
-              </div>
-              <p class="feature__description">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего
-                питомца!
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="before-after">
-        <div class="before-after__container">
-          <div class="before-after__info">
-            <h2 class="before-after__info-heading heading heading-1">
-              Живой пример
-            </h2>
-            <p class="before-after__info-description">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
-              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-              При этом он не менял своих привычек и по-прежнему спит по 16 часов
-              в день.
-            </p>
-            <div class="before-after__fieldset-group">
-              <div class="before-after__fieldset fieldset">
-                <span class="fieldset__content">5 КГ</span>
-                <span class="fieldset__legend">снижение веса</span>
-              </div>
-              <div class="before-after__fieldset fieldset">
-                <span class="fieldset__content">60 дней</span>
-                <span class="fieldset__legend">затрачено времени</span>
-              </div>
-            </div>
-            <p class="before-after__cost-field heading heading-3">
-              Затраты на питание:
-              <span class="before-after__cost-field-price">15 000 РУБ.</span>
-            </p>
-          </div>
-          <div class="before-after__diff">
-            <div class="before-after__diff-images-wrapper">
-              <img
-                class="before-after__img-before"
-                src="./public/before-desktop@2x.png"
-                alt="cat-before"
-                loading="lazy"
-              />
-              <img
-                class="before-after__img-after"
-                src="./public/after-desktop@2x.png"
-                alt="cat-after"
-                loading="lazy"
-              />
-            </div>
-            <div class="before-after__diff-input-controls">
-              <button class="before-after__diff-label heading heading-3">
-                было
-              </button>
-              <div class="before-after__diff-input-wrapper">
-                <label>
-                  <span style="display: none">
-                    Ползунок для просмотра изображений до и после
-                  </span>
-                  <input
-                    class="before-after__diff-input"
-                    type="range"
-                    min="0"
-                    max="1"
-                    step="0.01"
-                    value="0.5"
-                    oninput="transformDiff(this.value)"
-                    onchange="transformDiff(this.value)"
-                  />
-                </label>
-              </div>
-              <button class="before-after__diff-label heading heading-3">
-                стало
-              </button>
-            </div>
-          </div>
-        </div>
+      <section class="additional-products">
+        <div class="additional-products__container">Additional Catalog</div>
       </section>
 
       <section class="contacts">
