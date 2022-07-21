@@ -1266,6 +1266,59 @@ body {
   }
 }
 
+/* =========== products section =========== */
+.products__catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 62px 80px;
+}
+
+.product-card {
+  display: grid;
+  grid-template-areas:
+    "pr-thumbnail"
+    "pr-title"
+    "pr-info"
+    "pr-btn";
+  grid-template-rows: 200px auto auto 40px;
+  grid-template-columns: 1fr;
+  gap: 20px 0;
+  justify-content: center;
+  padding: 40px;
+  padding-top: 0;
+}
+
+.product-card__thumbnail {
+  grid-area: pr-thumbnail;
+}
+
+.product-card__title {
+  grid-area: pr-title;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product-card__info-table {
+  grid-area: pr-info;
+  border-collapse: collapse;
+}
+
+.info-table__row td {
+  border-bottom: 1px dotted var(--color-special-grey-2);
+}
+
+.info-table__row td:last-child {
+  text-align: right;
+}
+
+.product-card__btn {
+  grid-area: pr-btn;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1;
+}
+
 /* =========== main element =========== */
 /* находится внизу чтобы перезаписывать внутренние отступы */
 .main {

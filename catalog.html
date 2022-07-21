@@ -59,6 +59,17 @@
       </svg>
     </div>
 
+    <template id="product-card-template">
+      <article class="product-card">
+        <img src="" alt="" class="product-card__thumbnail" />
+        <h3 class="product-card__title heading heading-3"></h3>
+        <table class="product-card__info-table info-table">
+          <tbody class="info-table__body"></tbody>
+        </table>
+        <button class="btn btn-primary product-card__btn">Заказать</button>
+      </article>
+    </template>
+
     <header class="main-header">
       <div class="main-header__container">
         <a href="/index.html" class="logo main-header__logo">
@@ -103,7 +114,10 @@
     </header>
     <main class="main">
       <section class="products main__top-element">
-        <div class="products__container">Catalog</div>
+        <div class="products__container">
+          <h2 class="heading heading-1">Каталог продукции</h2>
+          <div class="products__catalog"></div>
+        </div>
       </section>
 
       <section class="additional-products">
@@ -214,5 +228,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="catalog.js"></script>
   </body>
 </html>
