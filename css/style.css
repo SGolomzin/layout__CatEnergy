@@ -123,6 +123,11 @@ body {
   }
 }
 
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
 .btn:hover {
   background-color: var(--color-special-grey);
 }
@@ -1267,6 +1272,10 @@ body {
 }
 
 /* =========== products section =========== */
+.products {
+  margin-bottom: 76px;
+}
+
 .products__catalog {
   display: grid;
   grid-template-rows: 512px;
@@ -1348,9 +1357,104 @@ body {
 
 .product-card__btn {
   grid-area: pr-btn;
-  padding: 10px 20px;
-  font-size: 16px;
-  line-height: 1;
+}
+
+/* =========== additional-products section =========== */
+.additional-products {
+  --ap-heading-padding: 40px;
+  position: relative;
+  margin-bottom: 80px;
+  overflow-x: hidden;
+}
+
+.additional-products__heading {
+  display: inline-flex;
+  margin-bottom: 80px;
+  padding: 0 var(--ap-heading-padding);
+  background-color: var(--color-basic-white);
+  transform: translateX(calc(var(--ap-heading-padding) * -1));
+}
+
+.additional-products__heading::before,
+.additional-products__heading::after {
+  position: absolute;
+  top: 20px;
+  z-index: -1;
+  width: 100vw;
+  height: 2px;
+  background-color: var(--color-basic-green);
+  content: "";
+}
+
+.additional-products__heading::before {
+  right: 100%;
+}
+
+.additional-products__heading::after {
+  left: 100%;
+}
+
+.additional-products__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 245px;
+  gap: 70px 80px;
+}
+
+.additional-products__table {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.additional-product {
+  display: grid;
+  grid-template-areas: "ap-name ap-amount ap-price ap-btn";
+  grid-template-columns: 5fr 3fr 1fr 245px;
+  gap: 20px 40px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--color-special-grey-2);
+}
+
+.additional-product:first-of-type {
+  border-top: 1px solid var(--color-special-grey-2);
+}
+
+.additional-product__name {
+  grid-area: ap-name;
+}
+
+.additional-product__amount {
+  grid-area: ap-amount;
+  color: var(--color-special-dark-grey);
+}
+
+.additional-product__price {
+  grid-area: ap-price;
+  justify-self: flex-end;
+  color: var(--color-special-dark-grey);
+}
+
+.additional-product__btn {
+  grid-area: ap-btn;
+}
+
+.additional-products__special-offer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--color-basic-white);
+  background-color: var(--color-basic-green);
+}
+
+.special-offer__description {
+  padding: 0 42px;
+  line-height: 1.25;
+  text-align: center;
 }
 
 /* =========== main element =========== */
