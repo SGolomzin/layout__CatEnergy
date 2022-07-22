@@ -4,7 +4,7 @@ const productsList = [
 		"info": {
 			"Масса": "500 г",
 			"Вкус": "Курица",
-			"Цена": "700 Р"
+			"Цена": "700 Р."
 		}
 	},
 	{
@@ -12,7 +12,7 @@ const productsList = [
 		"info": {
 			"Масса": "1000 г",
 			"Вкус": "Курица",
-			"Цена": "1000 Р"
+			"Цена": "1000 Р."
 		}
 	},
 	{
@@ -20,7 +20,7 @@ const productsList = [
 		"info": {
 			"Масса": "500 г",
 			"Вкус": "Рыба",
-			"Цена": "700 Р"
+			"Цена": "700 Р."
 		}
 	},
 	{
@@ -28,11 +28,34 @@ const productsList = [
 		"info": {
 			"Масса": "1000 г",
 			"Вкус": "Рыба",
-			"Цена": "1000 Р"
+			"Цена": "1000 Р."
+		}
+	},
+	{
+		"title": "Cat Energy SLIM 500 г",
+		"info": {
+			"Масса": "500 г",
+			"Вкус": "Гречка",
+			"Цена": "400 Р."
+		}
+	},
+	{
+		"title": "Cat Energy SLIM 1000 г",
+		"info": {
+			"Масса": "1000 г",
+			"Вкус": "Гречка",
+			"Цена": "700 Р."
+		}
+	},
+	{
+		"title": "Cat Energy SLIM 500 г",
+		"info": {
+			"Масса": "500 г",
+			"Вкус": "Рис",
+			"Цена": "500 Р."
 		}
 	}
 ];
-
 
 let cardTemplate = document.getElementById("product-card-template");
 let productsContainer = document.querySelector(".products__catalog");
@@ -40,7 +63,7 @@ let productsContainer = document.querySelector(".products__catalog");
 productsList.forEach(product => {
 	let card = cardTemplate.content.cloneNode(true);
 	let title = card.querySelector(".product-card__title");
-	let tableBody = card.querySelector(".info-table__body");
+	let tableBody = card.querySelector(".info__table-body");
 
 	title.textContent = product.title;
 
@@ -53,10 +76,10 @@ productsList.forEach(product => {
 		tdValue.textContent = value;
 
 		tr.append(tdKey, tdValue);
-		tr.classList.add("info-table__row");
+		tr.classList.add("info__table-row");
 
 		tableBody.append(tr);
 	}
 
-	productsContainer.append(card);
+	productsContainer.prepend(card);
 })
