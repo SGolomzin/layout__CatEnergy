@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Cat Energy - Каталог продукции</title>
+    <title>Cat Energy - Подбор программы</title>
     <meta
       name="description"
       content="Cat Energy - функциональное питание для котов"
@@ -59,19 +59,6 @@
       </svg>
     </div>
 
-    <template id="product-card-template">
-      <article class="product-card">
-        <img src="" alt="" class="product-card__thumbnail" />
-        <h3 class="product-card__title heading heading-3"></h3>
-        <table class="product-card__info info">
-          <tbody class="info__table-body"></tbody>
-        </table>
-        <button class="btn btn-sm btn-primary product-card__btn">
-          Заказать
-        </button>
-      </article>
-    </template>
-
     <header class="main-header">
       <div class="main-header__container">
         <a href="./index.html" class="logo main-header__logo">
@@ -104,106 +91,190 @@
             <li class="main-menu__list-item">
               <a href="./index.html" class="main-menu__item-link"> Главная </a>
             </li>
-            <li class="main-menu__list-item main-menu__list-item--active">
-              <a class="main-menu__item-link"> Каталог продукции </a>
-            </li>
             <li class="main-menu__list-item">
-              <a href="./form.html" class="main-menu__item-link">
-                Подбор программы
+              <a href="./catalog.html" class="main-menu__item-link">
+                Каталог продукции
               </a>
+            </li>
+            <li class="main-menu__list-item main-menu__list-item--active">
+              <a class="main-menu__item-link"> Подбор программы </a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <section class="products main__top-element">
-        <div class="products__container">
-          <h2 class="products__heading heading heading-1">Каталог продукции</h2>
-          <div class="products__catalog">
-            <article class="product-card product-card--show-more">
-              <img src="" alt="" class="product-card__thumbnail" />
-              <h3 class="product-card__title heading heading-3">
-                Показать еще 100500 товаров
-              </h3>
-              <p class="product-card__info info">
-                На самом деле вкусов гораздо больше!
-              </p>
-              <button class="btn btn-sm product-card__btn">Показать все</button>
-            </article>
-          </div>
+      <section class="form-nutrition main__top-element">
+        <div class="form-nutrition__header header__container">
+          <h1 class="heading heading-1">Подбор программы</h1>
+          <p class="form-nutrition__description">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
         </div>
-      </section>
-
-      <section class="additional-products">
-        <div class="additional-products__container">
-          <h2
-            class="heading heading-2 additional-products__heading heading--between-lines"
-          >
-            Дополнительные товары
-          </h2>
-          <div class="additional-products__wrapper">
-            <div class="additional-products__table">
-              <div class="additional-products__item additional-product">
-                <span class="additional-product__name heading heading-3">
-                  Сахарозаменитель
-                </span>
-                <span class="additional-product__amount">
-                  1 упаковка (100 г)
-                </span>
-                <span class="additional-product__price"> 200 Р </span>
-                <button class="btn btn-sm btn-primary additional-product__btn">
-                  Заказать
-                </button>
-              </div>
-              <div class="additional-products__item additional-product">
-                <span class="additional-product__name heading heading-3">
-                  Питьевая вода
-                </span>
-                <span class="additional-product__amount"> 5 литров </span>
-                <span class="additional-product__price"> 50 Р </span>
-                <button class="btn btn-sm btn-primary additional-product__btn">
-                  Заказать
-                </button>
-              </div>
-              <div class="additional-products__item additional-product">
-                <span class="additional-product__name heading heading-3">
-                  молоко
-                </span>
-                <span class="additional-product__amount"> 1 литр </span>
-                <span class="additional-product__price"> 100 Р </span>
-                <button class="btn btn-sm btn-primary additional-product__btn">
-                  Заказать
-                </button>
-              </div>
-              <div class="additional-products__item additional-product">
-                <span class="additional-product__name heading heading-3">
-                  витамины
-                </span>
-                <span class="additional-product__amount">
-                  1 упаковка (30 г)
-                </span>
-                <span class="additional-product__price"> 300 Р </span>
-                <button class="btn btn-sm btn-primary additional-product__btn">
-                  Заказать
-                </button>
-              </div>
-            </div>
-            <div class="additional-products__special-offer special-offer">
-              <div class="gift__icon">
-                <img
-                  src="./public/icon_gift.svg"
-                  alt="Gift icon"
-                  width="80"
-                  height="84"
+        <form method="post" class="form-nutrition">
+          <fieldset class="form-nutrition__fieldset">
+            <div class="fieldset__container">
+              <div class="input-wrapper">
+                <label for="nickname" class="input-label"> Имя: </label>
+                <input
+                  id="nickname"
+                  type="text"
+                  name="nickname"
+                  class="input"
+                  placeholder="барсик"
                 />
               </div>
-              <p class="special-offer__description">
-                Закажите все и получите чехол для кота в подарок!
-              </p>
+              <div class="input-wrapper">
+                <label for="weight" class="input-label"> Вес (кг): </label>
+                <input
+                  id="weight"
+                  type="number"
+                  name="weight"
+                  class="input"
+                  placeholder="7"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="age" class="input-label"> Возраст: </label>
+                <input
+                  id="age"
+                  type="number"
+                  name="age"
+                  class="input"
+                  placeholder="7"
+                />
+              </div>
+
+              <div class="input-wrapper-checkbox">
+                <input
+                  id="program-slim"
+                  type="radio"
+                  name="nutrition-type"
+                  class="input"
+                  checked
+                />
+                <label for="program-slim" class="input-label">
+                  Похудение
+                </label>
+              </div>
+              <div class="input-wrapper-checkbox">
+                <input
+                  id="program-pro"
+                  type="radio"
+                  name="nutrition-type"
+                  class="input"
+                />
+                <label for="program-pro" class="input-label">
+                  Набор массы
+                </label>
+              </div>
+              <div class="input-wrapper-checkbox">
+                <input
+                  id="needAdvice"
+                  type="radio"
+                  name="nutrition-type"
+                  class="input"
+                />
+                <label for="needAdvice" class="input-label">
+                  Не знаю (Нужен ваш совет)
+                </label>
+              </div>
             </div>
-          </div>
-        </div>
+          </fieldset>
+          <fieldset class="form-nutrition__fieldset">
+            <div class="fieldset__container">
+              <legend class="heading heading-2 heading--between-lines">
+                Контактные данные (владельца кота)
+              </legend>
+              <div class="input-wrapper">
+                <label for="email" class="input-label"> E-mail: </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  class="input"
+                  placeholder="kuklachev@gmail.com"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="phone" class="input-label"> Телефон: </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  class="input"
+                  placeholder="8 (960) 900-60-90"
+                />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-nutrition__fieldset">
+            <div class="fieldset__container">
+              <legend class="heading heading-2 heading--between-lines">
+                Комментарий
+              </legend>
+              <textarea
+                name="comment"
+                id="comment"
+                cols="30"
+                rows="10"
+                class="input"
+                placeholder="Расскажите обо всех повадках кота"
+              ></textarea>
+            </div>
+          </fieldset>
+          <fieldset class="form-nutrition__fieldset">
+            <div class="fieldset__container">
+              <legend class="heading heading-2 heading--between-lines">
+                Дополнительно
+              </legend>
+              <div class="input-wrapper-checkbox">
+                <input
+                  id="extra-sugar"
+                  type="checkbox"
+                  name="extra-sugar"
+                  class="input"
+                />
+                <label for="extra-sugar" class="input-label">
+                  сахарозаменитель
+                </label>
+              </div>
+              <div class="input-wrapper-checkbox">
+                <input
+                  id="extra-water"
+                  type="checkbox"
+                  name="extra-water"
+                  class="input"
+                />
+                <label for="extra-water" class="input-label">
+                  питьевая вода
+                </label>
+              </div>
+              <div class="input-wrapper-checkbox">
+                <input
+                  id="extra-milk"
+                  type="checkbox"
+                  name="extra-milk"
+                  class="input"
+                />
+                <label for="extra-milk" class="input-label"> молоко </label>
+              </div>
+              <div class="input-wrapper-checkbox">
+                <input
+                  id="extra-vitamins"
+                  type="checkbox"
+                  name="extra-vitamins"
+                  class="input"
+                />
+                <label for="extra-vitamins" class="input-label">
+                  витамины
+                </label>
+              </div>
+              <input type="submit" value="отправить заявку" />
+              <span>* — Обязательные поля</span>
+            </div>
+          </fieldset>
+        </form>
       </section>
 
       <section class="contacts">
