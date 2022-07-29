@@ -1276,6 +1276,11 @@ body {
   margin-bottom: 76px;
 }
 
+.products__heading {
+  margin-top: 75px;
+  margin-bottom: 85px;
+}
+
 .products__catalog {
   display: grid;
   grid-template-rows: 512px;
@@ -1357,6 +1362,97 @@ body {
 
 .product-card__btn {
   grid-area: pr-btn;
+}
+
+@media (max-width: 1300px) {
+  .products__heading {
+    margin-top: 65px;
+    margin-bottom: 85px;
+  }
+
+  .products__catalog {
+    grid-template-rows: 512px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .products__heading {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .products__catalog {
+    grid-template-rows: 190px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-card {
+    grid-template-areas:
+      "pr-thumbnail pr-title"
+      "pr-thumbnail pr-info"
+      "pr-btn pr-btn";
+    grid-template-rows: 46px auto 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    justify-content: center;
+    padding: 12px;
+    padding-top: 0;
+  }
+
+  .product-card:before {
+    height: 0;
+  }
+
+  .product-card__title {
+    width: 50%;
+    margin: 0;
+    font-size: 16;
+    line-height: 1.25;
+    text-align: start;
+  }
+
+  .product-card__info {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .info__table-row td {
+    padding: 2px 0 2px;
+    line-height: 1;
+    border-bottom: none;
+  }
+
+  .product-card--show-more {
+    grid-template-areas:
+      "pr-thumbnail"
+      "pr-title"
+      "pr-info"
+      "pr-btn";
+    grid-template-rows: 50px auto auto 40px;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .product-card.product-card--show-more::before {
+    border: none;
+  }
+
+  .product-card--show-more .product-card__title {
+    width: 80%;
+  }
+
+  .product-card--show-more .product-card__title,
+  .product-card--show-more .product-card__info {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .product-card--show-more .product-card__thumbnail {
+    background-size: 30px 30px;
+  }
 }
 
 /* =========== additional-products section =========== */
