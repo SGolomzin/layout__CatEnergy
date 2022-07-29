@@ -1450,6 +1450,8 @@ body {
   min-height: 200px;
   color: var(--color-basic-white);
   background-color: var(--color-basic-green);
+  background-image: url("../public/gift-photo-desktop@2x.jpg");
+  background-size: cover;
 }
 
 .special-offer__description {

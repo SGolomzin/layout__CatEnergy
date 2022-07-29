@@ -23,6 +23,7 @@ btnMobileMainHeaderMenu.addEventListener("click", (e) => {
 
 const map_container = document.querySelector('.contacts__map-yandex');
 const map_stub = map_container.querySelector(".contacts__map-yandex-stub");
+map_container.setAttribute('tabindex', '0');
 const options_map = {
 	once: true,	//запуск один раз, и удаление наблюдателя сразу
 	passive: true,
@@ -32,6 +33,7 @@ map_container.addEventListener('click', start_lazy_map, options_map);
 map_container.addEventListener('mouseover', start_lazy_map, options_map);
 map_container.addEventListener('touchstart', start_lazy_map, options_map);
 map_container.addEventListener('touchmove', start_lazy_map, options_map);
+map_container.addEventListener('focus', start_lazy_map, options_map);
 
 let map_loaded = false;
 function start_lazy_map() {
@@ -40,6 +42,7 @@ function start_lazy_map() {
 		map_loaded = true;
 		map_block.setAttribute('src', map_block.getAttribute('data-src'));
 		map_block.removeAttribute('data_src');
+		map_container.setAttribute('tabindex', '-1');
 		map_stub.style.display = "none";
 		console.log('YMAP LOADED');
 	}
