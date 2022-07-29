@@ -1365,6 +1365,10 @@ body {
 }
 
 @media (max-width: 1300px) {
+  .products {
+    margin-bottom: 70px;
+  }
+
   .products__heading {
     margin-top: 65px;
     margin-bottom: 85px;
@@ -1378,6 +1382,10 @@ body {
 }
 
 @media (max-width: 767.98px) {
+  .products {
+    margin-bottom: 28px;
+  }
+
   .products__heading {
     margin-top: 30px;
     margin-bottom: 50px;
@@ -1403,7 +1411,17 @@ body {
   }
 
   .product-card:before {
-    height: 0;
+    height: 1px;
+  }
+
+  .product-card:first-of-type::after {
+    position: absolute;
+    top: -20px;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-basic-grey);
+    content: "";
   }
 
   .product-card__title {
@@ -1494,6 +1512,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 245px;
   gap: 70px 80px;
+  align-items: center;
 }
 
 .additional-products__table {
@@ -1508,7 +1527,7 @@ body {
   grid-template-columns: 5fr 3fr 1fr 245px;
   gap: 20px 40px;
   align-items: center;
-  padding: 15px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--color-special-grey-2);
 }
 
@@ -1543,7 +1562,7 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: 200px;
+  min-height: 289px;
   color: var(--color-basic-white);
   background-color: var(--color-basic-green);
   background-image: url("../public/gift-photo-desktop@2x.jpg");
@@ -1554,6 +1573,101 @@ body {
   padding: 0 42px;
   line-height: 1.25;
   text-align: center;
+}
+
+@media (max-width: 1300px) {
+  .additional-products__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .additional-product {
+    grid-template-areas:
+      "ap-name ap-amount ap-price"
+      "ap-btn ap-btn ap-btn";
+    grid-template-columns: 7fr auto 1fr;
+    padding: 25px 35px;
+    border-right: 1px solid var(--color-special-grey-2);
+    border-left: 1px solid var(--color-special-grey-2);
+  }
+
+  .additional-products__special-offer {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 200px;
+    background-image: url("../public/gift-photo-tablet@1x.jpg");
+    background-position: center 60%;
+  }
+
+  .special-offer__description {
+    width: 162px;
+    padding: 0;
+    text-align: start;
+  }
+
+  .contacts,
+  .contacts__card {
+    background-color: var(--color-basic-grey);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .additional-products {
+    --ap-heading-padding: 20px;
+    margin-bottom: 35px;
+  }
+
+  .additional-products__heading {
+    display: inline-flex;
+    width: calc(100% + var(--ap-heading-padding) / 2);
+    margin-bottom: 35px;
+  }
+
+  .additional-products__heading::before,
+  .additional-products__heading::after {
+    top: 14px;
+  }
+
+  .additional-products__wrapper {
+    gap: 40px;
+  }
+
+  .additional-product {
+    grid-template-areas:
+      "ap-name ."
+      "ap-amount ap-price"
+      "ap-btn ap-btn";
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 0;
+    padding: 12px 0;
+    border-right: none;
+    border-left: none;
+  }
+
+  .additional-product__amount,
+  .additional-product__price {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .additional-products__special-offer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    min-height: 289px;
+    background-image: url("../public/gift-photo-mobile@1x.jpg");
+    background-position: center;
+  }
+
+  .special-offer__description {
+    text-align: center;
+  }
 }
 
 /* =========== main element =========== */
