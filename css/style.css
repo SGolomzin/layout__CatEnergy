@@ -1686,6 +1686,7 @@ body {
 }
 
 .form-nutrition__heading {
+  margin-top: 20px;
   margin-bottom: 56px;
 }
 
@@ -1887,6 +1888,129 @@ body {
 
 .form-nutrition__required-helper {
   align-self: center;
+}
+
+@media (max-width: 1300px) {
+  .form-nutrition__heading {
+    margin-top: 40px;
+  }
+
+  .fieldset__group {
+    flex-direction: column;
+  }
+
+  .fieldset__group--checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+
+  .fieldset__group--submit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .form-nutrition__header {
+    margin-bottom: 40px;
+  }
+
+  .form-nutrition__heading {
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+
+  .form-nutrition__fieldset {
+    margin-bottom: 30px;
+  }
+
+  .input-wrapper {
+    gap: 8px;
+  }
+
+  .input-label,
+  .input,
+  .textarea {
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .input,
+  .textarea {
+    padding: 14px 15px;
+  }
+
+  .input-with-icon {
+    padding-right: 50px;
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .input-label-radio__checkmark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .input-label-checkbox__checkmark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fieldset__group--with-border {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: transparent;
+  }
+
+  .fieldset__group--with-border::before,
+  .fieldset__group--with-border::after {
+    position: absolute;
+    left: -50%;
+    z-index: -1;
+    width: 200%;
+    height: 1px;
+    background-color: var(--color-special-grey);
+    content: "";
+  }
+
+  .fieldset__group--with-border::before {
+    top: 0;
+  }
+
+  .fieldset__group--with-border::after {
+    bottom: 0;
+  }
+
+  .fieldset__group--checkbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+
+  .fieldset__group--submit {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form-nutrition__submit-btn {
+    height: 40px;
+    margin-bottom: 8px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
+  .form-nutrition__required-helper {
+    text-align: center;
+  }
 }
 
 /* =========== main element =========== */
