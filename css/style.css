@@ -1331,8 +1331,13 @@ body {
 }
 
 .product-card__thumbnail {
+  display: grid;
   grid-area: pr-thumbnail;
-  margin-bottom: 20px;
+}
+
+.product-card__thumbnail-image {
+  align-self: flex-end;
+  justify-self: center;
 }
 
 .product-card--show-more .product-card__thumbnail {
@@ -1433,6 +1438,10 @@ body {
     height: 1px;
     background-color: var(--color-basic-grey);
     content: "";
+  }
+
+  .product-card__thumbnail-image {
+    max-width: 70%;
   }
 
   .product-card__title {
