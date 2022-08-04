@@ -10,9 +10,9 @@ function calcDiffPoly(percent, part) {
 	let a = b = 0, c = d = 100;
 
 	if (part === 'l') {
-		a = b = Math.round(percent * 100);
+		a = b = 100 - Math.round(percent * 100);
 	} else if (part === 'r') {
-		c = d = Math.round(percent * 100);
+		c = d = 100 - Math.round(percent * 100);
 	}
 
 	return `polygon(${a}% 0%, ${b}% 100%, ${c}% 100%, ${d}% 0%)`
