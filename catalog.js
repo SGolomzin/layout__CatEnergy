@@ -7,8 +7,8 @@ const productsList = [
 			"Цена": "700 Р."
 		},
 		"image": {
-			"src": "./public/catalog/energy_pro_500_chicken_desktop@1x.png",
-			"srcset": "./public/catalog/energy_pro_500_chicken_desktop@2x.png 2x",
+			"src": "./public/catalog/energy_pro_500_chicken_desktop@1x.webp",
+			"srcset": "./public/catalog/energy_pro_500_chicken_desktop@2x.webp 2x",
 			"alt": "Изображение упаковки со вкусом курицы объемом 500 грамм",
 			"loading": "lazy"
 		}
@@ -21,8 +21,8 @@ const productsList = [
 			"Цена": "1000 Р."
 		},
 		"image": {
-			"src": "./public/catalog/energy_pro_1000_chicken_desktop@1x.png",
-			"srcset": "./public/catalog/energy_pro_1000_chicken_desktop@2x.png 2x",
+			"src": "./public/catalog/energy_pro_1000_chicken_desktop@1x.webp",
+			"srcset": "./public/catalog/energy_pro_1000_chicken_desktop@2x.webp 2x",
 			"alt": "Изображение упаковки со вкусом курицы объемом 1000 грамм",
 			"loading": "lazy"
 		}
@@ -35,8 +35,8 @@ const productsList = [
 			"Цена": "700 Р."
 		},
 		"image": {
-			"src": "./public/catalog/energy_pro_500_fish_desktop@1x.png",
-			"srcset": "./public/catalog/energy_pro_500_fish_desktop@2x.png 2x",
+			"src": "./public/catalog/energy_pro_500_fish_desktop@1x.webp",
+			"srcset": "./public/catalog/energy_pro_500_fish_desktop@2x.webp 2x",
 			"alt": "Изображение упаковки со вкусом рыбы объемом 500 грамм",
 			"loading": "lazy"
 		}
@@ -49,8 +49,8 @@ const productsList = [
 			"Цена": "1000 Р."
 		},
 		"image": {
-			"src": "./public/catalog/energy_pro_1000_fish_desktop@1x.png",
-			"srcset": "./public/catalog/energy_pro_1000_fish_desktop@2x.png 2x",
+			"src": "./public/catalog/energy_pro_1000_fish_desktop@1x.webp",
+			"srcset": "./public/catalog/energy_pro_1000_fish_desktop@2x.webp 2x",
 			"alt": "Изображение упаковки со вкусом рыбы объемом 1000 грамм",
 			"loading": "lazy"
 		}
@@ -63,8 +63,8 @@ const productsList = [
 			"Цена": "400 Р."
 		},
 		"image": {
-			"src": "./public/catalog/energy_pro_500_buckwheat_desktop@1x.png",
-			"srcset": "./public/catalog/energy_pro_500_buckwheat_desktop@2x.png 2x",
+			"src": "./public/catalog/energy_pro_500_buckwheat_desktop@1x.webp",
+			"srcset": "./public/catalog/energy_pro_500_buckwheat_desktop@2x.webp 2x",
 			"alt": "Изображение упаковки со вкусом гречки объемом 500 грамм",
 			"loading": "lazy"
 		}
@@ -77,8 +77,8 @@ const productsList = [
 			"Цена": "700 Р."
 		},
 		"image": {
-			"src": "./public/catalog/energy_pro_1000_buckwheat_desktop@1x.png",
-			"srcset": "./public/catalog/energy_pro_1000_buckwheat_desktop@2x.png 2x",
+			"src": "./public/catalog/energy_pro_1000_buckwheat_desktop@1x.webp",
+			"srcset": "./public/catalog/energy_pro_1000_buckwheat_desktop@2x.webp 2x",
 			"alt": "Изображение упаковки со вкусом гречки объемом 1000 грамм",
 			"loading": "lazy"
 		}
@@ -91,8 +91,8 @@ const productsList = [
 			"Цена": "500 Р."
 		},
 		"image": {
-			"src": "./public/catalog/energy_pro_500_rice_desktop@1x.png",
-			"srcset": "./public/catalog/energy_pro_500_rice_desktop@2x.png 2x",
+			"src": "./public/catalog/energy_pro_500_rice_desktop@1x.webp",
+			"srcset": "./public/catalog/energy_pro_500_rice_desktop@2x.webp 2x",
 			"alt": "Изображение упаковки со вкусом риса объемом 500 грамм",
 			"loading": "lazy"
 		}
@@ -103,6 +103,8 @@ let cardTemplate = document.getElementById("product-card-template");
 let productsContainer = document.querySelector(".products__catalog");
 
 let productList = [];
+
+/*
 productsList.forEach(product => {
 	let card = cardTemplate.content.cloneNode(true);
 	let title = card.querySelector(".product-card__title");
@@ -136,3 +138,4 @@ productsList.forEach(product => {
 })
 
 productsContainer.prepend(...productList)
+*/
