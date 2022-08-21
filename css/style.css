@@ -294,11 +294,11 @@ body {
 }
 
 .main-header__toggle-menu-btn--open::before {
-  background-image: url("/public/icon_menu_open.svg");
+  background-image: url("./public/icon_menu_open.svg");
 }
 
 .main-header__toggle-menu-btn--close::before {
-  background-image: url("/public/icon_menu_close.svg");
+  background-image: url("./public/icon_menu_close.svg");
 }
 
 @media (max-width: 1300px) {
@@ -1341,7 +1341,7 @@ body {
 }
 
 .product-card--show-more .product-card__thumbnail {
-  background-image: url("/public/icon_plus.svg");
+  background-image: url("./public/icon_plus.svg");
   background-repeat: no-repeat;
   background-position: center 80%;
   background-size: 60px 60px;
